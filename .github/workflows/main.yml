@@ -24,7 +24,9 @@ jobs:
           java-version: "17"
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
+        with:
+          packages: "platform-tools"
 
       - name: Verify BINGO ET web files
         run: test -f index.html && test -f styles.css && test -f app.js && test -f manifest.json && test -f sw.js
